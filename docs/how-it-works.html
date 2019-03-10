@@ -10,7 +10,32 @@
 <body>
 	<div class="splash">
 		<h1><a href="../index.html">&lt;</a> how it works</h1>
-		<p></p>
+		<p>This article will lead you through most llamechat endpoints and give you a basic understanding of how a llamechat client/server interacts + what endpoints you need to reach to complete certain operations.</p>
+		<div class="links">
+			<a href="#creating-deleting-accounts">creating/deleting accounts</a>
+			<a href="#authentication">authentication</a>
+			<a href="#creating-deleting-channels">creating/deleting channels</a>
+			<a href="#sending-messages">sending messages</a>
+		</div>
+		<h2 id="creating-deleting-accounts">creating/deleting accounts</h2>
+		<p>To create an account, populate the username, password, and email headers of a POST request to <code>/accounts/create/</code>. This endpoint could return the following;</p>
+		<pre>
+{ error: { code: 400, message: "No username, password, or email provided." } }
+{ error: { code: 400, message: "This username has already been claimed." } }
+{ success: { code: 200, message: "Account created." } }
+</pre>
+		<p>To delete an account, populate the username, password, and email headers of a POST request to <code>/accounts/delete/</code>. This endpoint could return the following;</p>
+		<pre>
+{ error: { code: 400, message: "No username, password, or email provided." } }
+{ error: { code: 400, message: "This account does not exist." } }
+{ success: { code: 200, message: "Account nuked." } }
+</pre>
+		<h2 id="authentication">authentication</h2>
+		<p>Hello, World!</p>
+		<h2 id="creating-deleting-channels">creating/deleting channels</h2>
+		<p>Hello, World!</p>
+		<h2 id="sending-messages">sending messages</h2>
+		<p>Hello, World!</p>
 	</div>
 </body>
 </html>

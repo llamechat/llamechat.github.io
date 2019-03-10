@@ -33,6 +33,17 @@ code {
 	white-space: pre;
 }
 
+p code {
+	margin: 0;
+}
+
+pre {
+	padding: 0.3em 0.5em;
+	margin: 1em 0;
+	background: #161621;
+	border-radius: 3px;
+}
+
 ul {
 	padding-left: 1em;
 }
@@ -45,6 +56,7 @@ ul li {
 a {
 	color: #999 !important;
 	text-decoration: none;
+	font-weight: normal;
 	cursor: pointer;
 }
 
@@ -54,6 +66,10 @@ a {
 	width: 33%;
 	min-width: 700px;
 	padding: 2em;
+}
+
+.splash .links {
+	margin: 1em 0;
 }
 
 .splash .links a {
