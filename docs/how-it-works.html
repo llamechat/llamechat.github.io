@@ -39,7 +39,19 @@
 { success: { code: 200, message: "Valid." } }
 </pre>
 		<h2 id="creating-deleting-channels">creating/deleting channels</h2>
-		<p>Hello, World!</p>
+		<p>To create a channel, populate the username, password, and name headers of a POST request to <code>/channels/create/</code>. This endpoint could return the following;</p>
+		<pre>
+{ error: { code: 400, message: "No username, password, or channel name provided." } }
+{ error: { code: 400, message: "This channel name has already been claimed." } }
+{ success: { code: 200, message: "Channel created." } }
+</pre>
+		<p>To delete a channel, populate the username, password, and name headers of a POST request to <code>/channels/delete/</code>. This endpoint could return the following;</p>
+		<pre>
+{ error: { code: 400, message: "No username, password, or channel name provided." } }
+{ error: { code: 400, message: "You are not the owner of this channel." } }
+{ error: { code: 400, message: "This channel does not exist." } }
+{ success: { code: 200, message: "Channel nuked." } }
+</pre>
 		<h2 id="sending-messages">sending messages</h2>
 		<p>Hello, World!</p>
 	</div>
