@@ -15,21 +15,37 @@ h1, h2, h3, h4, h5, h6 {
 	color: #ddd;
 }
 
-p, blockquote {
+p, blockquote, ul {
 	margin: 1em 0;
-}
-
-a {
-	color: #999 !important;
-	display: block;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 blockquote {
 	padding: 0.8em 1.5em;
 	background: rgba(0, 0, 0, 0.1);
 	border-left: 3px solid #161621;
+}
+
+code {
+	padding: 0.3em 0.5em;
+	margin: 0.5em 0;
+	background: #161621;
+	border-radius: 3px;
+	white-space: pre;
+}
+
+ul {
+	padding-left: 1em;
+}
+
+ul li {
+	margin: 0.5em 0;
+	list-style: none;
+}
+
+a {
+	color: #999 !important;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /* stuff */
@@ -42,6 +58,7 @@ blockquote {
 
 .splash .links a {
 	margin-left: 1em;
+	display: block;
 	transition: margin-left 0.2s;
 }
 
