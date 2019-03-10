@@ -53,7 +53,14 @@
 { success: { code: 200, message: "Channel nuked." } }
 </pre>
 		<h2 id="sending-messages">sending messages</h2>
-		<p>Hello, World!</p>
+		<p>To send a message, populate the username, password, and message headers of a POST request to <code>/channels/any/send/</code>. (where <code>any</code> is the name of the channel) This endpoint will return one of the following;</p>
+		<pre>
+{ error: { code: 400, message: "No username, password, or message provided." } }
+{ error: { code: 400, message: "Message is too long." } }
+{ error: { code: 400, message: "This channel does not exist." } }
+{ error: { code: 400, message: "You are not a member of this channel." } }
+{ success: { code: 200, message: "Message sent." } }
+</pre>
 	</div>
 </body>
 </html>
