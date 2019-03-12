@@ -50,6 +50,7 @@
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username, password, or message provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
 { "error": { "code": 400, "message": "Message is too long." } }
 { "error": { "code": 400, "message": "This channel does not exist." } }
 { "error": { "code": 400, "message": "You are not a member of this channel." } }
@@ -68,6 +69,7 @@
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username, password, or channel name provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
 { "error": { "code": 400, "message": "You are not the owner of this channel." } }
 { "error": { "code": 400, "message": "This channel does not exist." } }
 { "success": { "code": 200, "message": "Channel nuked." } }
@@ -85,6 +87,7 @@
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username, password, or channel name provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
 { "error": { "code": 400, "message": "This channel name has already been claimed." } }
 { "success": { "code": 200, "message": "Channel created." } }
 </pre>
@@ -101,27 +104,28 @@
 		<h3>Input Headers</h3>
 		<h3>Output Data</h3>
 		<pre>
-{ "error": { code: 400, message: "No username or password provided." } }
-{ "error": { code: 400, message: "Invalid username + password combo." } }
-{ "success": { code: 200, message: "Valid." } }
+{ "error": { "code": 400, "message": "No username or password provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
+{ "success": { "code": 200, "message": "Valid." } }
 </pre>
 		<h2><code>POST /accounts/delete/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
 		<h3>Output Data</h3>
 		<pre>
-{ "error": { code: 400, message: "No username or password provided." } }
-{ "error": { code: 400, message: "This account does not exist." } }
-{ "success": { code: 200, message: "Account nuked." } }
+{ "error": { "code": 400, "message": "No username or password provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
+{ "error": { "code": 400, "message": "This account does not exist." } }
+{ "success": { "code": 200, "message": "Account nuked." } }
 </pre>
 		<h2><code>POST /accounts/create/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
 		<h3>Output Data</h3>
 		<pre>
-{ "error": { code: 400, message: "No username or password provided." } }
-{ "error": { code: 400, message: "This username has already been claimed." } }
-{ "success": { code: 200, message: "Account created." } }
+{ "error": { "code": 400, "message": "No username or password provided." } }
+{ "error": { "code": 400, "message": "This username has already been claimed." } }
+{ "success": { "code": 200, "message": "Account created." } }
 </pre>
 </body>
 </html>
