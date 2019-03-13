@@ -40,7 +40,7 @@
 		<pre>typeof Channel { ... }</pre>
 		<hr>
 		<h2 id="channels-any-send"><code>POST /channels/any/send/</code></h2>
-		<p>Sends a message to the channel.</p>
+		<p>Sends a message to the channel from a user, requires user privelages.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -60,7 +60,7 @@
 </pre>
 		<hr>
 		<h2 id="channels-delete"><code>POST /channels/delete/</code></h2>
-		<p>Hello, World!</p>
+		<p>Delets a channel, requires user privelages of owner.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -79,7 +79,7 @@
 </pre>
 		<hr>
 		<h2 id="channels-create"><code>POST /channels/create/</code></h2>
-		<p>Creates a channel with provided name</p>
+		<p>Creates a channel with provided name, requires user privelages for owner.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -97,12 +97,24 @@
 </pre>
 		<hr>
 		<h2 id="accounts"><code>GET  /accounts/</code></h2>
-		<p>Hello, World!</p>
+		<p>Gets all account usernames, requires admin privelages.</p>
 		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "admin",
+	"password": "p4ssw0rd_123"
+}
+</pre>
 		<h3>Output Data</h3>
+		<pre>
+[
+	"testAccount",
+	...
+]
+</pre>
 		<hr>
 		<h2 id="accounts-any"><code>GET  /accounts/any/</code></h2>
-		<p>Hello, World!</p>
+		<p>Gets account info from a username, requires user/admin privelages.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -116,7 +128,7 @@ typeof Account { ... }
 </pre>
 		<hr>
 		<h2 id="accounts-auth"><code>POST /accounts/authenticate/</code></h2>
-		<p>Hello, World!</p>
+		<p>Checks if you have a valid username + password.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -132,7 +144,7 @@ typeof Account { ... }
 </pre>
 		<hr>
 		<h2 id="accounts-delete"><code>POST /accounts/delete/</code></h2>
-		<p>Hello, World!</p>
+		<p>Deletes an account, requires user privelages.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
@@ -149,7 +161,7 @@ typeof Account { ... }
 </pre>
 		<hr>
 		<h2 id="accounts-create"><code>POST /accounts/create/</code></h2>
-		<p>Hello, World!</p>
+		<p>Creates an account.</p>
 		<h3>Input Headers</h3>
 		<pre>
 {
