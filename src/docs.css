@@ -58,6 +58,14 @@ a {
 	cursor: pointer;
 }
 
+hr {
+	width: 90%;
+	height: 1px;
+	margin: 1em 5%;
+	background: currentColor;
+	border: none;
+}
+
 /* stuff */
 
 .splash {
