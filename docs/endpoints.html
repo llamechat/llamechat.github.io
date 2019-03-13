@@ -37,19 +37,7 @@
 		<h2 id="channels-any"><code>GET  /channels/any/</code></h2>
 		<p>Gets information about a channel.</p>
 		<h3>Output Data</h3>
-		<pre>
-{
-	"name": "testChannel",
-	"owner": typeof Account,
-	"members": [
-		typeof Account,
-		...
-	],
-	"options": {
-		pubic: true,
-	}
-}
-</pre>
+		<pre>typeof Channel { ... }</pre>
 		<hr>
 		<h2 id="channels-any-send"><code>POST /channels/any/send/</code></h2>
 		<p>Sends a message to the channel.</p>
@@ -116,11 +104,26 @@
 		<h2 id="accounts-any"><code>GET  /accounts/any/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "admin" | "testAccount",
+	"password": "p4ssw0rd_123"
+}
+</pre>
 		<h3>Output Data</h3>
+		<pre>
+typeof Account { ... }
+</pre>
 		<hr>
 		<h2 id="accounts-auth"><code>POST /accounts/authenticate/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "testAccount",
+	"password": "p4ssw0rd_123"
+}
+</pre>
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username or password provided." } }
@@ -131,6 +134,12 @@
 		<h2 id="accounts-delete"><code>POST /accounts/delete/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "testAccount",
+	"password": "p4ssw0rd_123"
+}
+</pre>
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username or password provided." } }
@@ -142,6 +151,12 @@
 		<h2 id="accounts-create"><code>POST /accounts/create/</code></h2>
 		<p>Hello, World!</p>
 		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "testAccount",
+	"password": "p4ssw0rd_123"
+}
+</pre>
 		<h3>Output Data</h3>
 		<pre>
 { "error": { "code": 400, "message": "No username or password provided." } }

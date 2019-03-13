@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../src/docs.css">
+	<title>endpoints overview / llamechat docs</title>
+</head>
+<body>
+	<div class="splash">
+		<h1><a href="../index.html">&lt;</a> endpoints overview</h1>
+		<p>Here is a simple list of all of the api endpoints.</p>
+		<h2 id="account"><code>class Account</code></h2>
+		<pre>
+{
+	"name": "testAccount",
+	"password": "p4ssw0rd_123",
+	"options": {
+		"color": "dddddd"
+	}
+}
+</pre>
+		<hr>
+		<h2 id="channel"><code>class Channel</code></h2>
+		<pre>
+{
+	"name": "testChannel",
+	"owner": typeof Account,
+	"members": [
+		typeof Account,
+		...
+	],
+	"options": {
+		"pubic": true,
+	}
+}
+</pre>
+	</div>
+</body>
+</html>
