@@ -15,6 +15,7 @@
 		<div class="links">
 			<a href="#channels"><code>GET  /channels/</code></a>
 			<a href="#channels-any"><code>GET  /channels/any/</code></a>
+			<a href="#channels-any-read"><code>GET  /channels/any/read/</code></a>
 			<a href="#channels-any-send"><code>POST /channels/any/send/</code></a>
 			<a href="#channels-delete"><code>POST /channels/delete/</code></a>
 			<a href="#channels-create"><code>POST /channels/create/</code></a>
@@ -38,6 +39,20 @@
 		<p>Gets information about a channel.</p>
 		<h3>Output Data</h3>
 		<pre>typeof Channel { ... }</pre>
+		<hr>
+		<h2 id="channels-any-read"><code>GET  /channels/any/read/</code></h2>
+		<p>Gets information about a channel.</p>
+		<h3>Output Data</h3>
+		<pre>
+{
+	"raw": [ typeof Message {}, ... ],
+	"html": "
+		&lt;div class="message"&gt;
+			&lt;div class="username"&gt;testAccount&lt;/div&gt;
+			&lt;div class="content"&gt;Hello, World!&lt;/div&gt;
+		&lt;/div&gt;..."
+}
+</pre>
 		<hr>
 		<h2 id="channels-any-send"><code>POST /channels/any/send/</code></h2>
 		<p>Sends a message to the channel from a user, requires user privelages.</p>
