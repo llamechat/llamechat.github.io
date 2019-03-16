@@ -18,7 +18,7 @@
 			<a href="#sending-messages">sending messages</a>
 		</div>
 		<h2 id="creating-deleting-accounts">creating/deleting accounts</h2>
-		<p>To create an account, populate the username and password headers of a POST request to <code>/accounts/create/</code>. This endpoint will succeed when complete.</p>
+		<p>To create an account, populate the username and password parameters of a POST request to <code>/accounts/create/</code>. This endpoint will succeed when complete.</p>
 		<pre>
 {
 	"success": {
@@ -27,7 +27,7 @@
 	}
 }
 </pre>
-		<p>To delete an account, populate the username and password headers of a POST request to <code>/accounts/delete/</code>. This endpoint will succeed when complete</p>
+		<p>To delete an account, populate the username and password parameters of a POST request to <code>/accounts/delete/</code>. This endpoint will succeed when complete</p>
 		<pre>
 {
 	"success": {
@@ -38,7 +38,7 @@
 </pre>
 		<h2 id="authentication">authentication</h2>
 		<blockquote>Tokens are currently not planned as a method of authentication.</blockquote>
-		<p>The <code>/accounts/authenticate/</code> endpoint is used as a comprimise for tokens, send a POST request with specified username and password headers to authenticate that account, the endpoint will succeed if the authentication is successful.</p>
+		<p>The <code>/accounts/authenticate/</code> endpoint is used as a comprimise for tokens, send a POST request with specified username and password parameters to authenticate that account, the endpoint will succeed if the authentication is successful.</p>
 		<pre>
 {
 	"success": {
@@ -48,7 +48,7 @@
 }
 </pre>
 		<h2 id="creating-deleting-channels">creating/deleting channels</h2>
-		<p>To create a channel, populate the username, password, and name headers of a POST request to <code>/channels/create/</code>. This endpoint will succeed when complete.</p>
+		<p>To create a channel, populate the username, password, and name parameters of a POST request to <code>/channels/create/</code>. This endpoint will succeed when complete.</p>
 		<pre>
 {
 	"success": {
@@ -57,7 +57,7 @@
 	}
 }
 </pre>
-		<p>To delete a channel, populate the username, password, and name headers of a POST request to <code>/channels/delete/</code>. This endpoint will succeed when complete.</p>
+		<p>To delete a channel, populate the username, password, and name parameters of a POST request to <code>/channels/delete/</code>. This endpoint will succeed when complete.</p>
 		<pre>
 {
 	"success": {
@@ -67,7 +67,7 @@
 }
 </pre>
 		<h2 id="sending-messages">sending messages</h2>
-		<p>To send a message, populate the username, password, and message headers of a POST request to <code>/channels/any/send/</code>. (where <code>any</code> is the name of the channel) This endpoint will return a success when the action is complete.</p>
+		<p>To send a message, populate the username, password, and message parameters of a POST request to <code>/channels/any/send/</code>. (where <code>any</code> is the name of the channel) This endpoint will return a success when the action is complete.</p>
 		<pre>
 {
 	"success": {
