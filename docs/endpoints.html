@@ -16,6 +16,7 @@
 			<a href="#channels"><code>GET  /channels/</code></a>
 			<a href="#channels-any"><code>GET  /channels/any/</code></a>
 			<a href="#channels-any-read"><code>GET  /channels/any/read/</code></a>
+			<a href="#channels-any-join"><code>POST /channels/any/join/</code></a>
 			<a href="#channels-any-send"><code>POST /channels/any/send/</code></a>
 			<a href="#channels-delete"><code>POST /channels/delete/</code></a>
 			<a href="#channels-create"><code>POST /channels/create/</code></a>
@@ -52,6 +53,24 @@
 			&lt;div class="content"&gt;Hello, World!&lt;/div&gt;
 		&lt;/div&gt;..."
 }
+</pre>
+		<hr>
+		<h2 id="channels-any-join"><code>POST /channels/any/join/</code></h2>
+		<p>Adds user as a member of the channel, requires user privelages.</p>
+		<h3>Input Headers</h3>
+		<pre>
+{
+	"username": "testAccount",
+	"password": "p4ssw0rd_123",
+	"channel": "testChannel"
+}
+</pre>
+		<h3>Output Data</h3>
+		<pre>
+{ "error": { "code": 400, "message": "No username, password, or channel name provided." } }
+{ "error": { "code": 400, "message": "Invalid username + password combo." } }
+{ "error": { "code": 400, "message": "This channel does not exist." } }
+{ "success": { "code": 200, "message": "Joined channel." } }
 </pre>
 		<hr>
 		<h2 id="channels-any-send"><code>POST /channels/any/send/</code></h2>
