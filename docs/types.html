@@ -16,6 +16,7 @@
 {
 	"name": "testAccount",
 	"password": "p4ssw0rd_123",
+	"members": [ "testChannel", ... ],
 	"options": {
 		"color": "dddddd"
 	}
@@ -26,14 +27,22 @@
 		<pre>
 {
 	"name": "testChannel",
-	"owner": typeof Account,
-	"members": [
-		typeof Account,
-		...
-	],
+	"owner": "testAccount",
+	"members": [ "testAccount", ... ],
+	"messages": [ typeof Message {}, ... ],
 	"options": {
 		"pubic": true,
 	}
+}
+</pre>
+		<h2 id="message"><code>class Message</code></h2>
+		<pre>
+{
+	"content": "Hello, World!",
+	"sender": "testAccount",
+	"date": "2019/3/16",
+	"time": "21:14",
+	"options": {}
 }
 </pre>
 	</div>
