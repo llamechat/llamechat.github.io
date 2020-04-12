@@ -1,2 +1,2 @@
-# llamechat.github.io
-llamechat Documentation and Standard Specifications.
+# llamechat-docs
+the llamechat standard and specifications.
