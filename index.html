@@ -10,23 +10,37 @@
 <body>
 	<section>
 		<h1>llamechat docs</h1>
-		<blockquote>test note</blockquote>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, quas aperiam. Voluptatum vero illum corrupti quaerat harum optio error tenetur minima odit dicta ex ratione consectetur nemo, in, dolores enim? asdasd asdasd asd asd <code>this is inline code inline code inline code inline code inline code inline code inline code inline code inline code inline code inline code</code> asd as dasdasdasd asd asdf sd</p>
-		<pre>&lt;head&gt;
-	&lt;meta charset="UTF-8"&gt;
-	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-	&lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="src/docs.css"&gt;
-	&lt;title&gt;llamechat docs&lt;/title&gt;
-&lt;/head&gt;</pre>
-		<p>that code block was an example of how &lt;pre&gt; behaves :) now here is a list: here it is;</p>
+		<p>you have stumbled upon the specification and documentation for the llamechat standard, i hope you will be able to find your way around with the index of links below; they include all you need to know, from what llamechat is to everything you need to know to build your own implementation.</p>
 		<ul>
-			<li><a href="#a">anchor a</a></li>
-			<li><a href="#b">anchor b</a></li>
-			<li><a href="#c">anchor c</a></li>
+			<li><a href="#what-is-llamechat">what is llamechat?</a></li>
+			<li><a href="#ijson-spec">ijson spec</a></li>
+		</ul>
+		<ul>
 			<li><a href="https://github.com/mininmobile/llamechat-server" class="external">implementation github</a></li>
 			<li><a href="https://github.com/mininmobile/llamechat-docs" class="external">documentation github</a></li>
 		</ul>
+	</section>
+	<section id="what-is-llamechat">
+		<h1>what is llamechat?</h1>
+		<p>llamechat is an irc-like standard to provide federated communication. llamechat in itself, does not exist, it is a specification that servers are built around. it is federated which means every llamechat server can talk to eachother, so if you make an account on foo.com you can join channels on bar.net, and vice-versa.</p>
+	</section>
+	<section id="ijson-spec">
+		<h1>ijson spec</h1>
+		<p>json with id, also known as ijson for short, is a way to show ownership and events on top of the ubiquitous json format that was built specifically for llamechat and could be used by alike services. it consists of an <code>@author</code>, <code>@intention</code>, and <code>@object</code>. here is an example ijson event (a request to send a message in this case)</p>
+		<pre>{
+	"@author": {
+		"id": "testuser",     <span class="c">// username of the event's originator</span>
+		"host": "example.com" <span class="c">// host/instance of the event's originator</span>
+	},
+	"@intention": "create",   <span class="c">// main type of event</span>
+	"@object": {
+		"@type": "message",   <span class="c">// sub-type of event</span>
+		<span class="c">// the rest of @object is just info about the event</span>
+		"channel": "testchannel",
+		"content": "Hello, World! :)
+	}
+}</pre>
+		<p>the <code>@intention</code>, as well as the <code>@object</code>'s <code>@type</code> are not standardized, however, and it is llamechat's (or the ijson-using service's) responsibility to define them, and what non-@ fields <code>@object</code> should contain.</p>
 	</section>
 </body>
 </html>

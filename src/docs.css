@@ -5,6 +5,9 @@
 
 html {
 	font-size: 1.1em;
+	tab-size: 4;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
 }
 
 body {
@@ -37,14 +40,16 @@ a {
 
 code {
 	white-space: pre-wrap;
-	color: #aaaaaa;
 }
+	color: #aaaaaa;
 
 pre {
 	padding: 0.3rem 0.5rem;
 	margin: 1rem 0;
 	white-space: pre-wrap;
 }
+
+pre .c { color: #aaaaaa; font-style: italic; }
 
 blockquote {
 	margin: 1rem 0;
