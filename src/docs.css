@@ -39,9 +39,9 @@ a {
 /* flavor */
 
 code {
+	color: #aaaaaa;
 	white-space: pre-wrap;
 }
-	color: #aaaaaa;
 
 pre {
 	padding: 0.3rem 0.5rem;
