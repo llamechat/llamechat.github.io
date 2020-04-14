@@ -14,6 +14,8 @@
 		<ul>
 			<li><a href="#what-is-llamechat">what is llamechat?</a></li>
 			<li><a href="#ijson-spec">ijson spec</a></li>
+			<li><a href="#server-structure">server structure</a></li>
+			<li><a href="#lifecycle-of-an-action">lifecycle of an action</a></li>
 		</ul>
 		<ul>
 			<li><a href="https://github.com/mininmobile/llamechat-server" class="external">implementation github</a></li>
@@ -41,6 +43,33 @@
 	}
 }</pre>
 		<p>the <code>@intention</code>, as well as the <code>@object</code>'s <code>@type</code> are not standardized, however, and it is llamechat's (or the ijson-using service's) responsibility to define them, and what non-@ fields <code>@object</code> should contain.</p>
+	</section>
+	<section id="server-structure">
+		<h1>server structure</h1>
+		<img src="src/img/server_structure.png">
+		<ul>
+			<li>/.well-known/antenna
+				<p>the antenna of a server serves as the main api endpoint that servers all functions, mainly pointing the requester to resources on the server or sending back full responses in ijson format</p>
+			</li>
+			<li>/resource/
+				<p>this directory should contain all sorts of media uploaded to the server, whether it is categorized is up to the implementation as long as the antenna points to the correct resources</p>
+			</li>
+			<li>/
+				<p>a main landing page should be served for the root directory, although not required</p>
+			</li>
+			<li>/client/
+				<p>a full featured web client to interact with the server and other llamechat servers, this could also serve as a dashboard. this is not required either</p>
+			</li>
+		</ul>
+	</section>
+	<section id="lifecycle-of-an-action">
+		<h1>lifecycle of an action</h1>
+		<p>lets walk through the lifecycle of an action, in this case the creation of a message in a text channel.</p>
+		<ul>
+			<li><h2>fart</h2>
+				<p>asd asd asd asd asd asd</p>
+			</li>
+		</ul>
 	</section>
 </body>
 </html>
