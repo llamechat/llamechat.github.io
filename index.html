@@ -66,6 +66,38 @@
 		<h1>lifecycle of an action</h1>
 		<p>lets walk through the lifecycle of an action, in this case inviting a user to join a channel. essentially client C requests data from server B, client C then asks server B to invite a user from server A (who is online on client A) who accepts the request, after that client A requests data from server B like client C did at the beginning. (the data in this case would be messages from the channel, avatars of users in the channel, etc.)</p>
 		<img src="src/img/lifecycle_of_an_event.png" style="width: 100%;">
+		<ul>
+			<li>1.X
+				<p>it is not shown in this diagram that clients A or C were authenticated before hand, but they were. client C is logged on as a user of server B and client A is logged on as a user of server A.</p>
+			</li>
+			<li>1.1
+				<p>client C asks for data about a channel from server B's antenna, and gets a response to resource locations which it then fetches from the server directly.</p>
+			</li>
+			<li>1.2
+				<p>client C sends an event to server B's antenna inviting a user from server A to a channel on server b.</p>
+			</li>
+			<li>1.3
+				<p>server B forwards the request to server A, server A validates the invite by sending back the request to server B but changing the <code>@intention</code> to <code>verify</code>.</p>
+			</li>
+			<li>1.4
+				<p>client A is connected via websocket to server A, it receives a notification about the invite.</p>
+			</li>
+			<li>1.5
+				<p>client A accepts the invite.</p>
+			</li>
+			<li>1.6
+				<p>server A tells server B that the invite has been accepted, server B verifies the invite accept, and adds the user to the channel.</p>
+			</li>
+			<li>1.7
+				<p>client A requests data from server B about the channel now that it has joined it</p>
+			</li>
+			<li>1.8
+				<p>client A requests resources from server B that it has gotten the locations for from the previous request.</p>
+			</li>
+			<li>1.9
+				<p>the websocket connecting client C and server B sends data to reflect the addition of the new user, from here on client C would request data about the new user from server A like their avatar and etc.</p>
+			</li>
+		</ul>
 	</section>
 </body>
 </html>
